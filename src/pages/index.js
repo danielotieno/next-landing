@@ -1,21 +1,22 @@
 import Head from 'next/head';
+import Layout from '../components/Layout';
+import Hero from '../components/Hero';
 
-export default function Home() {
+function Home() {
   return (
-    <div>
-      <Head>
-        <title>Next.js 101</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+    <Layout>
+      <div className='min-h-screen mx-auto md:max-w-3xl md:px-4'>
+        <Head>
+          <title>Next.js 101</title>
+          <link rel='icon' href='/favicon.ico' />
+        </Head>
 
-      <main className='flex flex-col justify-center min-h-screen'>
-        <img
-          className='w-24 m-auto my-4 sm:w-auto'
-          alt='Ihatetomatoes'
-          src='/assets/img_logo.svg'
-        />
-        <h1 className='mx-auto text-4xl font-bold'>Welcome to Next.js 101!</h1>
-      </main>
-    </div>
+        <main className='p-4 bg-white'>
+          <Hero />
+        </main>
+      </div>
+    </Layout>
   );
 }
+
+export default Home;
